@@ -180,6 +180,17 @@ ol {
 .order {
   font-family: inherit;
   color: #ffffff;
+  display: flex;
+  background-image: linear-gradient(
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)
+  );
+}
+
+.order-bg {
+  width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -188,10 +199,10 @@ ol {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
   padding-top: 188px;
   padding-bottom: 188px;
+  display: flex;
+  flex-direction: column;
 }
 
 .order-title {
@@ -201,7 +212,7 @@ ol {
   text-align: center;
   letter-spacing: 0.02em;
   margin: 0 auto;
-  max-width: 496px;
+  max-width: 497px;
 }
 
 .order-btn {
@@ -440,11 +451,15 @@ ol {
   fill: var(--icon-customers-color);
 }
 
-.customers-link:hover {
+.customers-link:hover,
+.customers-link:focus {
   border-color: var(--icon-active-customers-color);
 }
 
 .customers-link:hover > .customers-icon {
+  fill: var(--icon-active-customers-color);
+}
+.customers-link:focus > .customers-icon {
   fill: var(--icon-active-customers-color);
 }
 
@@ -518,6 +533,7 @@ ol {
   width: 40px;
   height: 40px;
 }
+
 .footer-link-social {
   width: 100%;
   height: 100%;
@@ -525,15 +541,14 @@ ol {
   background-color: rgba(255, 255, 255, 0.1);
   justify-content: center;
   align-items: center;
-  background-size: content;
   background-repeat: no-repeat;
   display: flex;
   fill: var(--logo-color);
 }
 
-.footer-link-social:hover,
-.footer-list-social:focus {
-  background-color: #31d0aa;
+.footer-link-social:focus,
+.footer-link-social:hover {
+  background-color: rgba(49, 208, 170, 1);
 }
 
 /*--------------PORTFOLIO--------------*/
